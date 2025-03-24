@@ -1,35 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import huluDisney from "./assets/Image.png";
+import huluEspn from "./assets/Espn.png";
+import logos from "./assets/Logos.png";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="main">
+        <header>
+          <div className="header">
+            <p>Log In</p>
+          </div>
+        </header>
+        <div className="home">
+          <div className="btn-container">
+            <img src={huluDisney} />
+            <img src={huluEspn} />
+            <button>GET THEM BOTH</button>
+            <button>GET ALL THREE</button>
+          </div>
+          <div className="info">
+            <p id="of">All of these and more now streaming</p>
+            <p id="in">
+              The Disney Bundle Duo Basic includes Disney+ (With Ads) and Hulu
+              (With Ads). Terms Apply.
+            </p>
+          </div>
+          <div className="logo">
+            <img src={logos} />
+            <p>View All Plan Options</p>
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
